@@ -21,7 +21,7 @@
         "mask_ktGaussian24"
     ],
     "uniform_input_kspace": false,
-    "val_interval": 2,
+    "val_interval": 40,
     "num_samples_per_case": 8,
     "data_aug": true,
     "resume_rng_state": false,
