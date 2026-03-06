@@ -12,6 +12,8 @@
 
 ## News
 * [March 16, 2026] As part of the NVIDIA Clara Open Models family, we released [NV-Raw2insights-MRI](https://github.com/NVIDIA-Medtech/NV-Raw2insights-MRI)
+* [Feb 4, 2026] **NV-Raw2Insights-MRI** achieved 🏆 **1st** place across all four tracks in the [CMRxRecon2025 Challenge](https://www.synapse.org/Synapse:syn59814210/wiki/634966) without task-specific fine-tuning.
+
 ## Overview
 
 Clinical MRI encompasses diverse imaging protocols—spanning anatomical targets (cardiac, brain, knee), contrasts (T1, T2, mapping), sampling patterns (Cartesian, radial, spiral, kt-space), and acceleration factors—yet current deep learning reconstructions are typically protocol-specific. NV-Raw2insights-MRI (SDUM) combines:
