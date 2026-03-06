@@ -1,0 +1,16 @@
+monai
+pandas
+numpy==1.26.4
+torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu124
+torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+omegaconf==2.3.0
+einops==0.8.0
+tensorboard
+timm==1.0.15
+h5py
+scikit-image==0.23.2
+wandb
+matplotlib
+SimpleITK
+huggingface_hub

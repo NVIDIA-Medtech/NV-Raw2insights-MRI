@@ -1,0 +1,2 @@
+# Git LFS: track .mat files in example/
+example/*.mat filter=lfs diff=lfs merge=lfs -text

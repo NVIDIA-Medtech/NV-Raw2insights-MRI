@@ -1,0 +1,40 @@
+# MONAI-style flake8 config (see https://github.com/Project-MONAI/MONAI/blob/dev/setup.cfg)
+# Requires: flake8, flake8-bugbear, flake8-comprehensions, pep8-naming (pip install flake8 flake8-bugbear flake8-comprehensions pep8-naming)
+
+[flake8]
+max-line-length = 120
+# Same rule set as MONAI
+select = B, C, E, F, N, P, T4, W, B9
+# MONAI ignores (Black compat, style, known exceptions)
+ignore =
+    E203
+    E501
+    E741
+    W503
+    W504
+    C408
+    N812
+    B023
+    B905
+    B028
+    B907
+    B908
+    B036
+    E704
+    N806
+    F405
+    N803
+    E722
+    F403
+    C416
+    C406
+    C403
+    C417
+    B006
+    N801
+    N802
+    B010
+    C405
+# Unused imports OK in __init__.py and __main__.py
+per-file-ignores = __init__.py:F401, __main__.py:F401
+exclude = .git,__pycache__,.venv,venv,env,build,dist,.eggs,*.egg-info,*.pyi

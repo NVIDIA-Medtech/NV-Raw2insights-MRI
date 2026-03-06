@@ -1,0 +1,6 @@
+{
+    "kspace": "example/MultiCoil/Cine/UnderSample_TaskR1/cine_lax_4ch_kus_ktRadial16.mat",
+    "mask": [
+        "example/MultiCoil/Cine/Mask_TaskR1/cine_lax_4ch_mask_ktRadial16.mat"
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "model_variant": "nv_raw2insights_mri_small",
+    "data_path_train": [
+        "dataset/CMRxRecon2025/ChallengeDataTrain"
+    ],
+    "data_path_val": [
+        "dataset/CMRxRecon2025/ChallengeDataValR1"
+    ],
+    "pretrained_csm": null,
+    "pretrained_recon": null,
+    "pp_z_score_norm": false,
+    "fixed_mask_types": [
+        "mask_Uniform8",
+        "mask_Uniform16",
+        "mask_Uniform24",
+        "mask_ktRadial8",
+        "mask_ktRadial16",
+        "mask_ktRadial24",
+        "mask_ktGaussian8",
+        "mask_ktGaussian16",
+        "mask_ktGaussian24"
+    ],
+    "uniform_input_kspace": false,
+    "val_interval": 40,
+    "num_samples_per_case": 16,
+    "data_aug": false,
+    "resume_rng_state": false,
+    "do_mapping_shuffle": false,
+    "do_center_crop": false,
+    "seed": null,
+    "lookahead": false,
+    "enable_onelogger": true,
+    "flow": false,
+    "balance_data": false,
+    "enable_cas_skips": true,
+    "finetune_ms": false,
+    "batch_size": 1,
+    "num_workers": 8,
+    "cache_rate": 0.0,
+    "sample_rate": 1.0,
+    "accelerations": [
+        8.0,
+        16.0,
+        24.0
+    ],
+    "center_fractions": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "train_mask_types": [
+        "uniform",
+        "kt_gaussian",
+        "kt_radial"
+    ],
+    "val_mask_types": [
+        "fixed"
+    ],
+    "num_epochs": 160,
+    "exp_dir": "./exp",
+    "exp": "nv_raw2insights_mri_small_posttrain",
+    "lr": 1.0e-05,
+    "weight_decay": 0.001,
+    "loss_type": "ssim_l1",
+    "model_type": "restormer",
+    "dataset": "CMRxRecon",
+    "warmup_epochs": 10,
+    "lr_schedule": "cosine",
+    "min_lr": 7.5e-06,
+    "model_filename": "nv_raw2insights_mri_small_posttrain.pt",
+    "use_csm": true,
+    "use_tau_csm": false,
+    "use_acs_region": true,
+    "norm_type": "ln",
+    "drop_path": 0.1,
+    "num_cascades": 6,
+    "num_frames": 5,
+    "mlp_ratio": 3,
+    "num_blocks": [
+        3,
+        6
+    ],
+    "num_heads": [
+        1,
+        2
+    ],
+    "num_refinement": 2,
+    "channels": [
+        256,
+        512
+    ],
+    "use_dc_weight_map": true,
+    "mask_specific_dc_weight_map": true,
+    "reinit_wandb": false,
+    "ddp": true,
+    "val": false,
+    "is_multi_coil": true
+}
