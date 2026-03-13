@@ -343,9 +343,7 @@ class CMRxReconReader(ImageReader):
         else:
             data_shape = dat[kspace_key]["real"].shape
             data_shape = (1,) * (5 - len(data_shape)) + data_shape  # [t, z, c, y, x] or [1, z, c, y, x]
-            data: ndarray = np.array(
-                dat[kspace_key]["real"] + 1j * dat[kspace_key]["imag"]
-            )
+            data: ndarray = np.array(dat[kspace_key]["real"] + 1j * dat[kspace_key]["imag"])
         data = data.reshape(data_shape)
 
         header[CMRxReconKeys.PID] = os.path.splitext(dat[CMRxReconKeys.FILENAME])[0].split("_")[0]

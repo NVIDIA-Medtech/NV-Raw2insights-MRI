@@ -212,15 +212,18 @@ if __name__ == "__main__":
         help="Mask directory to search for .mat files of mask data. Should always be path/to/ChallengeData",
     )
     parser.add_argument("--output_dir", help="Output directory for saved json files")
-    parser.add_argument("--training_set", action="store_true", default=False, 
+    parser.add_argument(
+        "--training_set",
+        action="store_true",
+        default=False,
         help="Whether to create json files for training set. Default is False.",
     )
     args = parser.parse_args()
 
     if args.training_set:
-        include_dirs = ['TrainingSet']
+        include_dirs = ["TrainingSet"]
     else:
-        include_dirs = ['ValidationSet']
+        include_dirs = ["ValidationSet"]
     # TODO: add TestSet
 
     mask_strings = ["mask"]
@@ -252,7 +255,9 @@ if __name__ == "__main__":
         )
 
 # 2025
-# Usage Train : 
-# python scripts/create_cmrxrecon_dataset.py --source_dir /data/CMRxRecon2025_Data/ChallengeData --mask_dir /data/CMRxRecon2025_Data/ChallengeData --output_dir dataset/CMRxRecon2025/ChallengeDataTrain --training_set 
-# Usage Val: 
-# python scripts/create_cmrxrecon_dataset.py --source_dir /data/CMRxRecon2025_Data/ChallengeDataValSet/TaskR1 --mask_dir /data/CMRxRecon2025_Data/ChallengeDataValSet/TaskR1 --output_dir dataset/CMRxRecon2025/ChallengeDataValR1
+# Usage Train :
+# python scripts/create_cmrxrecon_dataset.py --source_dir /data/CMRxRecon2025_Data/ChallengeData --mask_dir \
+# /data/CMRxRecon2025_Data/ChallengeData --output_dir dataset/CMRxRecon2025/ChallengeDataTrain --training_set
+# Usage Val:
+# python scripts/create_cmrxrecon_dataset.py --source_dir /data/CMRxRecon2025_Data/ChallengeDataValSet/TaskR1 \
+# --mask_dir /data/CMRxRecon2025_Data/ChallengeDataValSet/TaskR1 --output_dir dataset/CMRxRecon2025/ChallengeDataValR1

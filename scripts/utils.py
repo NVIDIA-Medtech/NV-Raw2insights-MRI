@@ -296,6 +296,7 @@ def resolve_checkpoint_path(model_variant: str, model_ckpt: str | Path | None = 
     try:
         from huggingface_hub import hf_hub_download
 
+        _ = hf_hub_download(repo_id=repo_id, filename="config.json")
         local_path = hf_hub_download(repo_id=repo_id, filename=filename)
         print(f"Downloaded checkpoint from Hugging Face ({repo_id}): {filename} -> {local_path}")
         return Path(local_path)

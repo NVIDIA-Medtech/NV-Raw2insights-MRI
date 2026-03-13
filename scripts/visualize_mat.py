@@ -113,7 +113,8 @@ def visualize_mat(
     n_rows = n_slices
     n_cols = n_times
     fig, axes = plt.subplots(
-        n_rows, n_cols,
+        n_rows,
+        n_cols,
         figsize=(figsize_per_slice * n_cols, figsize_per_slice * n_rows),
         squeeze=False,
     )
@@ -139,21 +140,21 @@ def visualize_mat(
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Visualize .mat files (img4ranking or other key)."
-    )
+    parser = argparse.ArgumentParser(description="Visualize .mat files (img4ranking or other key).")
     parser.add_argument(
         "paths",
         nargs="+",
         help="Paths to .mat files or a directory (will use all .mat inside).",
     )
     parser.add_argument(
-        "-o", "--output-dir",
+        "-o",
+        "--output-dir",
         default=None,
         help="If set, save figures here instead of showing (filename: <mat_basename>.png).",
     )
     parser.add_argument(
-        "-k", "--key",
+        "-k",
+        "--key",
         default="img4ranking",
         help="Key to visualize (default: img4ranking).",
     )
